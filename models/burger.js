@@ -18,11 +18,6 @@ const burger = {
           cb(res);
         });
       },
-      // delete: function(cols, vals, id, cb) {
-      //   orm.delete("burgers", cols, vals, id, function(res) {
-      //     cb(res);
-      //   });
-      // }
     };
     
     // Export the database functions for the controller (burgersController.js).

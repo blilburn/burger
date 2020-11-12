@@ -16,7 +16,7 @@ const orm = {
     },
     insertOne: function(table, cols, vals, cb) {
       let queryString = `INSERT INTO ${table} (${cols}) VALUES ("${vals}")`
-  //may need to delete vals below
+
       connection.query(queryString, vals, function(err, result) {
         if (err) {
           throw err;
@@ -25,7 +25,7 @@ const orm = {
         cb(result);
       });
     },
-  // An example of objColVals would be {name: panther, sleepy: true}
+  
   updateOne: function(table, cols, vals, id, cb) {
     const queryString = `UPDATE ${table} SET ${cols} = ${vals} WHERE id = ${id}`;
     connection.query(queryString, function(err, result) {
